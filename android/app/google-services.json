@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "787182810529",
+    "project_id": "robowars-783a9",
+    "storage_bucket": "robowars-783a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:787182810529:android:295045a4e3c7e48607c7e0",
+        "android_client_info": {
+          "package_name": "com.example.robo_warss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "787182810529-1ajtv33n0l755hlj31hesg5kvtbqi8am.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.robo_warss",
+            "certificate_hash": "4709a3ff36a7a976fa228ac153aeb64c9fefd991"
+          }
+        },
+        {
+          "client_id": "787182810529-s7hb8ijjvs4nho40ghu4bhs9dhldnrqo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_C1I-LxS7IC2J33P13yWNUKwU9K51z9s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "787182810529-s7hb8ijjvs4nho40ghu4bhs9dhldnrqo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
