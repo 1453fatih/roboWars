@@ -94,9 +94,9 @@ class _JoyPadState extends State<JoyPad> {
           new Container(
             alignment: Alignment.topRight,
             padding: new EdgeInsets.only(top: 20.0),
-            child: new FlatButton(
-              onPressed: () {},
-            ),
+            // child: new FlatButton(
+            //  onPressed: () {},
+            // ),
           ),
 
           //Round Text
@@ -108,9 +108,22 @@ class _JoyPadState extends State<JoyPad> {
           ),
 */
           //Timer Text
+
           new Container(
-            padding: new EdgeInsets.only(bottom: 42.0, top: 10.0),
-            child: new RaisedButton(
+              padding: new EdgeInsets.only(bottom: 42.0, top: 10.0),
+              child: ElevatedButton(
+                //color: Colors.green,
+                //highlightColor: Colors.red,
+                //elevation: 10,
+                child: Text(
+                  "Google Giriş",
+                  style: TextStyle(color: Colors.white),
+                ),
+                onPressed: () {
+                  _handleSignIn();
+                },
+              )
+              /* new RaisedButton(
               color: Colors.green,
               highlightColor: Colors.red,
               elevation: 10,
@@ -121,9 +134,10 @@ class _JoyPadState extends State<JoyPad> {
               onPressed: () {
                 _handleSignIn();
               },
-            ),
-          ),
+            ), */
+              ),
 
+/*
           new Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
@@ -182,8 +196,9 @@ class _JoyPadState extends State<JoyPad> {
                   onPressed: () {
                     print("down");
                   })
+                  
             ],
-          ),
+          ), */
         ],
       ),
     );

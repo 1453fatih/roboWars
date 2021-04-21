@@ -17,9 +17,9 @@ class dashboard2 extends StatelessWidget {
           new Container(
             alignment: Alignment.topRight,
             padding: new EdgeInsets.only(top: 20.0),
-            child: new FlatButton(
-              onPressed: () {},
-            ),
+            // child: new FlatButton(
+            //  onPressed: () {},
+            //),
           ),
 
           //Round Text
@@ -30,16 +30,84 @@ class dashboard2 extends StatelessWidget {
           ),
 
           //Timer Text
-/*
+
           new Container(
             alignment: Alignment.bottomCenter,
             padding: new EdgeInsets.only(bottom: 30.0, top: 5.0),
-            child: new Text(("Reklam Alanı :)")),
+            // child: new Text(("Reklam Alanı :)")),
           ),
-*/
+
           new Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
+              ElevatedButton(
+                child: GestureDetector(
+                  child: new Icon(
+                    Icons.arrow_left_sharp,
+                    size: 48.0,
+                    color: Colors.white,
+                  ),
+                  onLongPress: () {
+                    _left();
+                  },
+                  onLongPressUp: () {
+                    _stoprl();
+                  },
+                ),
+                onPressed: () {},
+              ),
+
+              ElevatedButton(
+                child: GestureDetector(
+                  child: new Icon(
+                    Icons.arrow_right_sharp,
+                    size: 48.0,
+                    color: Colors.white,
+                  ),
+                  onLongPress: () {
+                    _right();
+                  },
+                  onLongPressUp: () {
+                    _stoprl();
+                  },
+                ),
+                onPressed: () {},
+              ),
+
+              ElevatedButton(
+                child: GestureDetector(
+                  child: new Icon(
+                    Icons.arrow_upward,
+                    size: 48.0,
+                    color: Colors.white,
+                  ),
+                  onLongPress: () {
+                    _forward();
+                  },
+                  onLongPressUp: () {
+                    _stopfb();
+                  },
+                ),
+                onPressed: () {},
+              ),
+
+              ElevatedButton(
+                child: GestureDetector(
+                  child: new Icon(
+                    Icons.arrow_downward,
+                    size: 48.0,
+                    color: Colors.white,
+                  ),
+                  onLongPress: () {
+                    _back();
+                  },
+                  onLongPressUp: () {
+                    _stopfb();
+                  },
+                ),
+                onPressed: () {},
+              ),
+/*
               new RaisedButton(
                 color: Colors.blue,
                 textColor: Colors.white,
@@ -57,17 +125,14 @@ class dashboard2 extends StatelessWidget {
                     _stoprl();
                   },
                 ),
-                onPressed:
-                    () {}, /*
+                onPressed: () {},
                 onLongPress: () {
-                  stopDown();
-
                   print("left");
-                },*/
+                },
               ),
-
+*/
               //Start/Pause Button
-
+/*
               new RaisedButton(
                 color: Colors.blue,
                 textColor: Colors.white,
@@ -86,9 +151,10 @@ class dashboard2 extends StatelessWidget {
                   },
                 ),
                 onPressed: () {},
-              ),
+              ),  */
 
               //Restart Button
+/*
               new RaisedButton(
                 color: Colors.green,
                 textColor: Colors.white,
@@ -108,8 +174,9 @@ class dashboard2 extends StatelessWidget {
                 ),
                 onPressed: () {},
               ),
-
+*/
               //Next Button
+/*
               new RaisedButton(
                 color: Colors.green,
                 textColor: Colors.white,
@@ -128,7 +195,7 @@ class dashboard2 extends StatelessWidget {
                   },
                 ),
                 onPressed: () {},
-              )
+              ) */
             ],
           ),
         ],
@@ -137,19 +204,19 @@ class dashboard2 extends StatelessWidget {
   }
 
   void _forward() {
-    databaseReference.child("robowars_Fatih").set({'forward': 'ileri'});
+    databaseReference.child("robowars_Fatih/move").set({'forward': 'ileri'});
   }
 
   void _back() {
-    databaseReference.child("robowars_Fatih").set({'back': 'geri'});
+    databaseReference.child("robowars_Fatih/move").set({'back': 'back'});
   }
 
   void _right() {
-    databaseReference.child("robowars_Fatih").set({'right': 'right'});
+    databaseReference.child("robowars_Fatih/turn").set({'right': 'right'});
   }
 
   void _left() {
-    databaseReference.child("robowars_Fatih").set({'left': 'left'});
+    databaseReference.child("robowars_Fatih/turn").set({'left': 'left'});
   }
 
 /*
@@ -164,13 +231,13 @@ class dashboard2 extends StatelessWidget {
 */
   void _stopfb() {
     databaseReference
-        .child('robowars_Fatih')
+        .child('robowars_Fatih/move')
         .update({'forward': 'stop', 'back': 'stop'});
   }
 
   void _stoprl() {
     databaseReference
-        .child('robowars_Fatih')
+        .child('robowars_Fatih/turn')
         .update({'right': 'stop', 'left': 'stop'});
   }
 
