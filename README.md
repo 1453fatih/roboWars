@@ -1,5 +1,6 @@
 # robo_warss
-<image src = "images/image1.jpg" width =300>
+<image src = "images/image1.png" width =300>
+  <image src = "images/image2.png" width =300>
 A new Flutter project.
 
 ## Getting Started
